@@ -1,7 +1,6 @@
-import express from "express";
-
-import { config } from "dotenv";
-import cookieParser from "cookie-parser";
+const express = require("express");
+const { config } = require("dotenv");
+const cookieParser = require("cookie-parser");
 
 config({
   path: "../.env",
@@ -15,8 +14,8 @@ const setUpServer = () => {
 
   const PORT = process.env.PORT;
 
-  app.listen(PORT, (c) => {
-    console.log(`Serve started at ${PORT}`);
+  app.listen(PORT, () => {
+    console.log(`Server started at ${PORT}`);
   });
 };
 
